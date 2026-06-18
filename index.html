@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFS Maze Generator & A* Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>DFS Maze Generator & A* Pathfinding Visualizer</h1>
+            <p class="subtitle">Сгенерируйте лабиринт и найдите кратчайший путь</p>
+        </header>
+
+        <main>
+            <div class="controls-panel">
+                <div class="input-group">
+                    <label for="mazeSize">Размер (NxN):</label>
+                    <select id="mazeSize">
+                        <option value="10">10x10</option>
+                        <option value="20" selected>20x20</option>
+                        <option value="30">30x30</option>
+                        <option value="40">40x40</option>
+                        <option value="50">50x50</option>
+                    </select>
+                </div>
+                
+                <div class="btn-group">
+                    <button id="btnGenerate" class="btn btn-primary">Generate Maze</button>
+                    <button id="btnSolve" class="btn btn-accent" disabled>Solve Maze</button>
+                    <button id="btnReset" class="btn btn-danger">Reset</button>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="mazeCanvas"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
